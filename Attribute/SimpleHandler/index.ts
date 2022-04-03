@@ -1,4 +1,4 @@
-import Handler, { ConstructorParam as ParentConstructorParam } from '@/src/component/Attribute/Handler';
+import Handler, { ConstructorParam as ParentConstructorParam } from '../../Attribute/Handler';
 
 export type ConstructorParam<Event extends keyof HTMLElementEventMap> = {
   handler: (event: HTMLElementEventMap[Event]) => Promise<void>;
