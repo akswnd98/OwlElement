@@ -1,4 +1,4 @@
-import EBElement from '@/src/component/Element';
+import EBElement from '../../Element';
 import { injectable, unmanaged } from 'inversify';
 import Attribute, { ConstructorParam as ParentConstructorParam } from '..';
 
