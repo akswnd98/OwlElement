@@ -6,7 +6,7 @@ export type ConstructorParam = {
 };
 
 @injectable()
-export default abstract class EBAttribute {
+export default abstract class Attribute {
   abstract register (element: Element): void;
   abstract unregister (element: Element): void;
 }
