@@ -1,4 +1,4 @@
-import EBElement from '../../Element';
+import Element from '../../Element';
 import { injectable, unmanaged } from 'inversify';
 import Attribute, { ConstructorParam as ParentConstructorParam } from '..';
 
@@ -17,7 +17,7 @@ export default abstract class Handler<Event extends keyof HTMLElementEventMap> e
     this.id = payload.id;
   }
 
-  register (element: EBElement) {
+  register (element: Element) {
     this.registeredHandler = (event: HTMLElementEventMap[Event]) => { this.handle(event); };
     element.shadowRoot!.getElementById(this.id)?.addEventListener(
       this.eventName,
@@ -25,7 +25,7 @@ export default abstract class Handler<Event extends keyof HTMLElementEventMap> e
     );
   }
 
-  unregister(element: EBElement): void {
+  unregister(element: Element): void {
     if (this.registeredHandler === undefined) return;
     element.shadowRoot!.getElementById(this.id)?.removeEventListener(
       this.eventName,
