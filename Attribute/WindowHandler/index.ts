@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { injectable, unmanaged } from 'inversify';
 import Attribute, { ConstructorParam as ParentConstructorParam } from '..';
 
